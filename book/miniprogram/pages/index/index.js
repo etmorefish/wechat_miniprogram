@@ -15,10 +15,11 @@ Page({
    */
   onLoad: function (options) {
     var _this = this;
+    wx.cloud.callFunction({ name: "batchupdate", compete: res => console.log(res) })
     db.collection('books').get().then(res => {
       // res.data 是一个包含集合中有权限访问的所有记录的数据，不超过 20 条
-      console.log(res.data[1]);
-      console.log(res.data[1].labels)
+      // console.log(res.data[1]);
+      // console.log(res.data[1].labels)
       // console.log(this);
       this.setData({
         booklist: res.data
@@ -73,5 +74,12 @@ Page({
    */
   onShareAppMessage: function () {
     
+  },
+
+  viewItem:function(event){
+    var id = event.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: '../bookDetails/bookDetails?id='+id
+    });
   }
 })
