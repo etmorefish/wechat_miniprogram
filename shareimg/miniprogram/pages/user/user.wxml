@@ -1,0 +1,13 @@
+<view class="head-img">
+  <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="getUserInfomation">
+    <van-image round contain width="6rem" height="6rem" src="{{avatarUrl}}" />
+  </button>
+  <view>{{nickName}}</view>
+</view>
+
+<view class="imglist">
+  <text class="tips">每个用户限制存储6张图片\n\n</text>
+  <view class="imgup">
+    <van-uploader file-list="{{ fileList }}" accept="image" max-count="6"  use-before-read bind:before-read="checkUser" bind:after-read="uploadToCloud" bind:delete="deleteToCloud" bind:click-preview="previewImg" preview-full-image="{{false}}"/>
+  </view>
+</view>

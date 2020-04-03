@@ -1,0 +1,15 @@
+<!--pages/list/list.wxml-->
+<text>渐变与动画</text>
+
+<view class="flex-box">
+  <navigator url="/pages/list/gradient/gradient" class="list-item"> Gradient</navigator>
+  <navigator url="/pages/list/filter/filter" class="list-item"> Filter</navigator>
+  <navigator url="/pages/list/transition/transition" class="list-item"> Transform</navigator>
+  <navigator url="/pages/list/animation/animation" class="list-item"> Animation</navigator>
+
+
+
+</view>
+
+<view class="gradient-display">
+</view>

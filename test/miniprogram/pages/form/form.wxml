@@ -1,0 +1,76 @@
+<!--pages/form/form.wxml-->
+<text>pages/form/form.wxml</text>
+<button type="primary" bindtap="buttonSetTitle">设置标题</button>
+
+<form bindsubmit="setNaivgationBarTitle">
+   <input type="text" placeholder="请输入页面标题并点击设置即可" name="navtitle"></input> 
+    <button type="primary" formType="submit">设置</button>
+</form>
+
+<!-- <form bindsubmit="inputSubmit">
+  <input type="text" name="username" placeholder="请输入你的用户名" confirm-type="secd"></input>
+  <input password type="text" name="password" maxlength="6" placeholder="请输入6位数密码"  confirm-type="next" />
+  <input type="idcard" name="idcard" placeholder="请输入你的身份证账号" />
+  <input type="number" name="age" placeholder="请输入你的年龄" />
+  <input type="digit" name="height" placeholder="请输入你身高多少米"/>
+  <button form-type="submit">提交</button>
+</form> -->
+
+<!-- <form bindsubmit="formSubmit" bindrest="formReset">
+    <view>开关选择器按钮</view>
+    <switch name="switch"/>
+    <view>滑动选择器按钮slider</view>
+    <slider name="process" show-value ></slider>
+    <view>文本输入框</view>
+    <input name="textinput" placeholder="要输入的文本" />
+    <view>单选按钮radio</view>
+    <radio-group name="sex">
+      <label><radio value="male"/>男</label>
+      <label><radio value="female"/>女</label>
+    </radio-group>
+    <view>多选按钮checkbox</view>
+    <checkbox-group name="gamecheck">
+      <label><checkbox value="game1"/>王者荣耀</label>
+      <label><checkbox value="game2"/>欢乐斗地主</label>
+      <label><checkbox value="game3"/>连连看</label>
+      <label><checkbox value="game4"/>刺激战场</label>
+      <label><checkbox value="game5"/>穿越火线</label>
+      <label><checkbox value="game6"/>天天酷跑</label>
+    </checkbox-group>
+    <button form-type="submit">提交</button>
+    <button form-type="reset">重置</button>
+</form> -->
+
+<form bindsubmit="submitContact">
+  <view>姓氏</view>
+  <input name="lastName" />
+  <view>名字</view>
+  <input name="firstName" />
+  <view>手机号</view>
+  <input name="mobilePhoneNumbe" />
+  <view>微信号</view>
+  <input name="weChatNumber" />
+  <button type="primary" form-type="submit">创建联系人</button>
+  <button type="default" form-type="reset">重置</button>
+</form>
+
+<view>你输入的是：{{inputValue}}</view>
+<input  bindinput="bindKeyInput" placeholder="输入的内容会同步到view中"/>
+
+<input type="text" name="copytext" value="{{initvalue}}" bindinput="valueChanged"></input>
+<input type="text" value="{{pasted}}"></input>
+<button type="primary" bindtap="copyText">复制</button>
+<button bindtap="pasteText">粘贴</button>
+
+
+<picker mode="date" value="{{pickerdate}}" start="2017-09-01" end="2022-09-01" bindchange="bindDateChange">
+选择的日期为：{{pickerdate}}
+</picker>
+
+<!-- <form bindsubmit="submitContact"> -->
+<view style="background-color:rgb({{R}},{{G}},{{B}});width:300rpx;height:300rpx"></view>
+<slider data-color="R" value='{{R}}' max="255" bindchanging='colorChanging'  show-value>红色</slider>
+<slider data-color="G" value='{{G}}' max="255" bindchanging='colorChanging' show-value>绿色</slider>
+<slider data-color="B" value='{{B}}' max="255" bindchanging='colorChanging' show-value>蓝色</slider>
+  <!-- <button type="default" form-type="reset">重置</button> -->
+<!-- </form> -->

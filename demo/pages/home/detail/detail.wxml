@@ -1,0 +1,4 @@
+<!--pages/home/detail/detail.wxml-->
+<text>pages/home/detail/detail.wxml</text>
+<image mode="widthFix" src="{{detail.img}}" sytle="height:auto"></image>
+<view>{{detail.desc}}</view>

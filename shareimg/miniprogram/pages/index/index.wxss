@@ -1,0 +1,7 @@
+.thumb-class {
+  width: 80%;
+  height: 80%;
+  border-radius: 150rpx;
+  margin: auto;
+  display: block;
+}

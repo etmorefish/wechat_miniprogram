@@ -1,0 +1,2 @@
+<!--pages/msgCheck/msgCheck.wxml-->
+<button bindtap="msgCheck">msgCheck</button>

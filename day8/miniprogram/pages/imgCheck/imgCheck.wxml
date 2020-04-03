@@ -1,0 +1,2 @@
+<!--pages/imgCheck/imgCheck.wxml-->
+<button bindtap="imgCheck">imgCheck</button>

@@ -1,0 +1,9 @@
+<!--pages/chinadata/chinadata.wxml-->
+<text>pages/chinadata/chinadata.wxml</text>
+<button ><navigator url="/pages/index/index">转到index页面</navigator></button> 
+
+
+<view class="list-item" bindtap="testFunction">
+  <text>测试云函数-知乎</text>
+</view>
+<button bindtap="callChinaData">调用chinadata云函数</button>

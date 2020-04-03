@@ -1,0 +1,11 @@
+<view class="head-img">
+  <van-image round contain width="6rem" height="6rem" src="{{avatarUrl}}" />
+  <view>{{nickName}}</view>
+</view>
+
+<view class="imglist">
+  <text class="tips">{{nickName}}的图片列表，单击图片可分享\n\n</text>
+  <view class="imgup">
+    <van-uploader file-list="{{ fileList }}" accept="image" max-count="6" deletable="{{false}}" bind:click-preview="previewImg" preview-full-image="{{false}}" disabled/>
+  </view>
+</view>

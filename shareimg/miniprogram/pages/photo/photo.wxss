@@ -1,0 +1,9 @@
+.showImg{
+  width: 750rpx;
+  height: 750rpx;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.btn{
+  margin: 10rpx 50rpx;
+}

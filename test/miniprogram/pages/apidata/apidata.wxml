@@ -1,0 +1,17 @@
+<!--pages/apidata/apidata.wxml-->
+<!-- <text>pages/apidata/apidata.wxml</text> -->
+<text>历史上的今天</text>
+<view class="page__bd">
+    <view class="weui-panel weui-panel_access">
+        <view class="weui-panel__bd" wx:for="{{result}}" wx:for-item="result" wx:key="*item">
+            <navigator  class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                    <image class="weui-media-box__thumb" mode="widthFix" src="{{result.pic}}" sytle="height:auto"></image>
+                </view>
+                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                    <view class="weui-media-box__title">{{result.title}}</view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+</view>

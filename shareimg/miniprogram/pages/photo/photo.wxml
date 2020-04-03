@@ -1,0 +1,4 @@
+<image class="showImg" wx:if="{{fileID}}" mode="aspectFill" src="{{fileID}}" bindtap="previewImg"></image>
+<van-button class="btn" type="primary" bindtap="downImg" block round>下载到本地</van-button>
+<van-button class="btn" type="info" bindtap="shareImg" block round>分享到朋友圈</van-button>
+<van-button class="btn"type="warning" bindtap="getImgUrl" block round>复制图片链接</van-button>

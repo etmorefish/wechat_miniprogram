@@ -1,0 +1,6 @@
+<!--pages/template/template.wxml-->
+<form report-submit="{{true}}" bindtap="onSubmit">
+<button form-type="submit">提交</button>
+ </form>
+ <button bindtap="getSubscript">发送订阅消息</button>
+ <button url="/pages/index/index">index</button>

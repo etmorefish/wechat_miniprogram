@@ -1,0 +1,11 @@
+<!--pages/zhihudaily/zhihudaily.wxml-->
+<text>pages/zhihudaily/zhihudaily.wxml</text>
+<button ><navigator url="/pages/index/index">回到ｉｎｄｅｘ页面</navigator></button> 
+<button ><navigator url="/pages/chinadata/chinadata">转到chinadata页面</navigator></button> 
+<button ><navigator url="/pages/login/login">转到login页面</navigator></button> 
+
+<button bindtap="addDaily">新增日报数据</button>
+<button bindtap="removeDaily">删除单条记录</button>
+<button bindtap="updateDaily">更新单条记录</button>
+<button bindtap="setDaily">替换更新记录</button>
+

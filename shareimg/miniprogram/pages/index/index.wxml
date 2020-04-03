@@ -1,0 +1,10 @@
+<view wx:for="{{userList}}" wx:key="key">
+<navigator url="../info/info?openid={{item._openid}}">
+<van-card centered 
+  thumb-class="thumb-class"
+  desc="{{item.city}}"
+  title="{{item.nickName}}"
+  thumb="{{item.avatarUrl}}"
+/>
+</navigator>
+</view>

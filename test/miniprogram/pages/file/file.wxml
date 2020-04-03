@@ -1,0 +1,44 @@
+<!--pages/file/file.wxml-->
+<!-- <text>pages/file/file.wxml</text> -->
+<!-- <button bindtap="chooseImg">选择图片</button>
+<image mode="widthFix" src="{{imgurl}}"></image>
+<view>上传的图片</view> -->
+
+<view wx:if="{{hasImg === false}}">
+  <button bindtap="chooseImg">选择图片</button>
+</view>
+<view wx:if="{{hasImg === true}}">
+    <!-- <image mode="widthFix" src="{{imgurl}}"></image> -->
+    <view wx:for-items="{{imgurl}}" wx:for-item="item" wx:key="*this">
+  <!-- <image mode="widthFix" src="{{item}}"></image> -->
+   <image mode="widthFix" src="{{item}}" data-src="{{item}} " bindtap="previewImg" style="width:100px;float:left"></image>
+</view>
+</view>
+
+<view wx:if="{{hasImg === true}}">
+    <button bindtap="previewImg">预览照片</button>
+</view>
+<image mode="widthFix" src="/image/background.jpg" bindtap="saveImg"></image>
+
+<button bindtap="chooseFile">选择文件</button>
+<view wx:for-items="{{tempFiles}}" wx:for-item="item" wx:key="*this">
+  <view>{{item.path}}</view>
+</view>
+
+<button bindtap="chooseLocation">选择地理位置</button>
+<view>{{location.name}}</view>
+<view>{{location.address}}</view>
+<view>{{location.latitude}}</view>
+<view>{{location.longitude}}</view>
+<map style="width: 100%; height: 300px;"
+  latitude="{{location.latitude}}"
+  longitude="{{location.longitude}}"
+  show-location
+></map>
+
+<view>临时文件的图片</view>
+<image mode="widthFix" src="{{tempFilePath}}" style="width:100px"></image>
+<view>缓存保存的图片</view>
+<image mode="widthFix" src="{{savedFilePath}}" style="width:100px"></image>
+<button  bindtap="chooseImage">请选择文件</button>
+<button  bindtap="saveImage">保存文件到缓存</button>

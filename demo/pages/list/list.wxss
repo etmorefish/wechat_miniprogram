@@ -1,0 +1,16 @@
+/* pages/list/list.wxss */
+
+.list-item{
+  background-color: #82c2f7;
+  height: 100px;
+  text-align: center;
+  border:1px solid #bdd2f8;
+  flex: 1;
+  display: flex;
+  align-items:center;/*垂直居中*/
+  justify-content: center;/*水平居中*/
+}
+
+.flex-box{
+  display: flex;
+}

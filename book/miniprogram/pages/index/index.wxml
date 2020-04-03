@@ -1,0 +1,14 @@
+<view wx:for="{{booklist}}">
+  <van-card
+    title="{{ item.title }}"
+    desc="{{item.abstract}}"
+    thumb="{{ item.cover_url }}"
+  >
+  <view slot="tags">
+    <view wx:for="{{ item.labels }}" wx:for-index="idx" wx:for-item="tag">
+   <view wx:if="{{ idx < 2 }}"> <van-tag type="primary">{{ tag }}</van-tag> </view>
+    </view>
+  </view>
+</van-card>
+</view>
+

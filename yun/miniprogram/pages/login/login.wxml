@@ -1,0 +1,15 @@
+<!--pages/login/login.wxml-->
+<text>pages/login/login.wxml</text>
+
+<button open-type="getUserInfo" bindgetuserinfo="getUserInfomation">点击获取用户信息</button>
+<image src="{{avatarUrl}}"></image>
+<view>{{city}}</view>
+<view>{{nickName}}</view>
+<view>{{openid}}</view>
+
+<navigator url="/pages/index/index">回到ｉｎｄｅｘ页面</navigator>
+
+<button bindtap="chooseImg">选择图片</button>
+<image mode="widthFix" src="{{imgurl}}"></image>
+
+<button bindtap="uploadimg">云函数上传图片</button>
