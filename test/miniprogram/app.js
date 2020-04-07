@@ -66,13 +66,6 @@ App({
       success(res) {
         console.log('wx.getSetting得到的数据', res)
         if (res.authSetting["scope.userInfo"]) {
-          // wx.getUserInfo({
-          //   success(res) {
-          //     console.log("wx.getUserInfo得到的数据", res)
-          //     console.log('this是啥', this)
-          //     this.globalData.userInfo = res.userInfo
-          //   }
-          // })
           wx.getUserInfo({
             success: res => {
               console.log('that是啥', that)

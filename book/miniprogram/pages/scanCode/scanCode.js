@@ -69,7 +69,7 @@ Page({
       onlyFromCamera: true,
       scanType: ['barCode'],
       success: res => {
-        // console.log(res.result);
+        console.log('res',res,res.result);
         wx.cloud.callFunction({
           // 需调用的云函数名
           name: 'bookinfo',
@@ -79,14 +79,39 @@ Page({
           },
           success: res => {
             var bookString = res.result;
-            // console.log(JSON.parse(bookString))
+            var info = JSON.parse(bookString)
+            console.log(info)
+            // console.log(JSON.parse(bookString).isbn)
+
+            // console.log(bookString)
             const db = wx.cloud.database()
             const books = db.collection('books')
+
             db.collection('books').add({
               // data 字段表示需新增的 JSON 数据
-              data: JSON.parse(bookString),
+              data: info,
               success: function (res) {
                 // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
+                // console.log(res)
+              }
+            })
+            function getdate() {
+              var now = new Date(),
+                y = now.getFullYear(),
+                m = now.getMonth() + 1,
+                d = now.getDate();
+              return y + "-" + (m < 10 ? "0" + m : m) + "-" + (d < 10 ? "0" + d : d) + " " + now.toTimeString().substr(0, 8);
+            }
+            console.log(info.isbn)
+            var publish_date = getdate()
+            console.log(publish_date)
+            db.collection('books').where({
+              isbn: info.isbn
+            }).update({
+              data: {
+                publish_date: publish_date
+              },
+              success: function (res) {
                 console.log(res)
               }
             })

@@ -21,7 +21,7 @@
 	},
 	"appid": "wx502c420faa024292",
 	"projectname": "yun",
-	"libVersion": "2.10.3",
+	"libVersion": "2.10.4",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
@@ -55,9 +55,10 @@
 					"query": ""
 				},
 				{
-					"id": -1,
-					"name": "/mysql",
-					"pathName": "pages/mysql/mysql",
+					"id": 1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
 					"scene": null
 				}
 			]
